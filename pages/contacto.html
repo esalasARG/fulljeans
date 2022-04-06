@@ -9,77 +9,85 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body>
-    <header id="Arriba">
-        <nav>
-            <div class="nav">
-                <ul>
-                    <li>
-                        <img src="../images/logo1.png" alt="logotipo de fulljeans" class="logo">
-                    </li>
-                    <li>
-                        <a href="../index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="./catalogo.html">CATALOGO</a>
-                    </li>
-                    <li>
-                        <a href="./promos.html">PROMOS</a>
-                    </li>
-                    <li>
-                        <a href="./tiendas.html">TIENDAS</a>
-                    </li>
-                    <li>
-                        <a href="./contacto.html"  class="active">CONTACTO</a>
-                    </li>
-                </ul>
-            </div>
+<body class="gridLayout">
+    <header id="arriba">
+        <a href="../index.html">
+            <img src="../images/logo1.png" alt="logotipo de fulljeans" class="logo">
+        </a>
+        <nav class="navMenu">
+            <ul>
+                <li>
+                    <a href="../index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="./catalogo.html">CATALOGO</a>
+                </li>
+                <li>
+                    <a href="./promos.html">PROMOS</a>
+                </li>
+                <li>
+                    <a href="./tiendas.html">TIENDAS</a>
+                </li>
+                <li>
+                    <a href="./contacto.html"  class="active">CONTACTO</a>
+                </li>
+            </ul>
         </nav>
-    </header>  
-    <h2>Contacto</h2>
-    <div class="grid">
+    </header> 
+    
+    
+    <section id="main">
         <div>
-            <div>
-                <p>Envianos tu CV a empleos@fulljeans.com.ar</p>
-            </div>
-            <div>
-                <p>(011) 6458-9786 - Canal Whatsapp de lunes a viernes de 8 a 17 hs</p>
-            </div>
-            <div>
-                <p>(011) 3598-7489</p>
-            </div>
-            <div>
-            <a href="mailto:ventas.eshop@fulljeans.com.ar">ventas.eshop@fulljeans.com.ar</a>
-            </div>
+            <h2>Contacto</h2>
         </div>
-        <div>
-            <form class="formContacto">
-                <h3>Escribinos y nos pondremos en contacto con vos en breve:</h3>
+        <div class="grid">
+            <div>
                 <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" required placeholder="tu nombre"> 
+                    <p>Envianos tu CV a empleos@fulljeans.com.ar</p>
                 </div>
                 <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="mail" required placeholder="tu email"> 
+                    <p>(011) 6458-9786 - Canal Whatsapp de lunes a viernes de 8 a 17 hs</p>
                 </div>
                 <div>
-                    <label for="tel">Teléfono</label>
-                    <input type="tel" id="telefono" required placeholder="tu teléfono"> 
+                    <p>(011) 3598-7489</p>
                 </div>
                 <div>
-                    <label for="comentarios">Tus comentarios</label>
-                    <input type="text" id="nombre" required placeholder="tu comentario"> 
+                <a href="mailto:ventas.eshop@fulljeans.com.ar">ventas.eshop@fulljeans.com.ar</a>
                 </div>
-                <div>
-                    <input type="submit" value="enviar">
-                </div>
-            </form>
-        </div>
-    </div>
-    <hr>
-    <a href="#Arriba">SUBIR</a>
+            </div>
+            <div>
+                <form class="formContacto">
+                    <h3>Escribinos y nos pondremos en contacto con vos en breve:</h3>
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" required placeholder="tu nombre"> 
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="mail" required placeholder="tu email"> 
+                    </div>
+                    <div>
+                        <label for="tel">Teléfono</label>
+                        <input type="tel" id="telefono" required placeholder="tu teléfono"> 
+                    </div>
+                    <div>
+                        <label for="comentarios">Tus comentarios</label>
+                        <input type="text" id="comentario" placeholder="tu comentario"> 
+                    </div>
+                    <div>
+                        <input type="submit" value="ENVIAR">
+                    </div>
+                </form>
+            </div>
+        </div>    
+    </section>
+
+    <section id="containerFlexChico">
+  
+    </section>
+
     <footer>
+        <a href="#arriba">SUBIR</a>
         <div class="navfooter">
             <ul>
                 <li>
@@ -124,7 +132,8 @@
             </ul>
         </div>
         <div>
-            <p>Todos los derechos reservados © Powered by Elias Salas @ CODERHOUSE</p>
+            <p>Todos los derechos reservados ©</p>
+            <p>Powered by Elias Salas @ CODERHOUSE</p>
         </div>
     </footer>
 </body>

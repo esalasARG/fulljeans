@@ -17,7 +17,7 @@ h2{
 
 p {
     font-family: "Roboto", sans-serif;
-    font-size: medium;
+    font-size: small;
     text-align: center;
 }
 
@@ -42,13 +42,34 @@ body{
     "main main main"
     "anuncios anuncios anuncios"
     "footer footer footer";
-    grid-template-rows: 150px 8fr 3fr 300px; 
+    grid-template-rows: 250px 8fr 3fr 200px; 
     grid-template-columns: 33% auto 33%;
     column-gap: 10px;
     row-gap: 10px;
     width: 100%; 
     justify-items: stretch;
     align-items: stretch;
+    max-height: max-content ;
+}
+@media screen and (max-width: 768px) {
+	.gridLayout {
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        grid-template-rows: 350px 4fr 500px; 
+        grid-template-columns: auto;
+    }
+}
+@media screen and (max-width: 1024px) {
+	.gridLayout {
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        grid-template-rows: 350px 4fr 500px; 
+        grid-template-columns: auto;
+    }
 }
 
 header{
@@ -56,11 +77,27 @@ header{
 }
 
 section#main{
-    grid-area: main;     
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
 }
 
 section#anuncios{
     grid-area: anuncios;     
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+@media screen and (max-width: 768px) {
+	section#anuncios{
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+	section#anuncios{
+        display: none;
+    }
 }
 
 footer{
@@ -69,29 +106,25 @@ footer{
 
 .containerMain{
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
+    width: 70%;
     flex-flow: row wrap;
 }
 .containerAnuncios{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    justify-content: flex-start;
     width: 100%;
 }
+
 .headerContainer{
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
 }
 
-
 /*HEADER*/
-
-.flotLogo{
-    position: absolute;
-    top: 50px;
-    left: 200px;
-}
 
 .logo{
     display:block;
@@ -100,6 +133,12 @@ footer{
     padding-top: 0.5rem;
     width: 8rem;
     height: 8rem;
+}
+@media screen and (max-width: 768px) {
+    .logo{
+        width: 4rem;
+        height: 4rem;
+    }
 }
 
 .navMenu ul{
@@ -110,11 +149,21 @@ footer{
     margin: 0;
 }
 
+
 .navMenu li{
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 6rem;
     height: 6rem;
     padding-left: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .navMenu li{
+        font-size: 0.5rem;
+        line-height: 3rem;
+        height: 3rem;
+        padding-left: 1rem;
+    }
 }
 
 .navMenu a {
@@ -137,6 +186,12 @@ footer{
 .navMenu li {
     display: inline-block;
 }
+@media screen and (max-width: 768px) {
+    .navMenu li {
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
 
 /*HOME*/
 
@@ -150,13 +205,26 @@ footer{
     height: 4fr;
 }
 
-/*CATALOGO*/
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
-    gap: 1rem;
+.containerFlex{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
 }
+
+.containerFlexChico{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100px;
+}
+
+.imagenesFijas{
+    width: 100%;
+}
+
+/*CATALOGO*/
 
 .discountLabel50{
     background-color: rgba(0, 184, 0, 0.562);
@@ -166,6 +234,13 @@ footer{
     position: absolute;
     top: -20px;
     right: -20px;
+}
+@media screen and (max-width: 768px) {
+    .discountLabel50{
+        font-weight: 100;
+        padding: 5px 10px;
+        font-size: small;
+    }
 }
 
 .discountLabel80{
@@ -177,26 +252,53 @@ footer{
     top: -20px;
     right: -20px;
 }
+@media screen and (max-width: 768px) {
+    .discountLabel80{
+        font-weight: 100;
+        padding: 5px 10px;
+        font-size: small;
+    }
+}
 
 .containerMarket{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-flow: row wrap;
+}
+@media screen and (max-width: 768px) {
+    .containerMarket{
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .containerMarket{
+        flex-flow: column wrap;
+        justify-content: center;
+    }
 }
 
 .cardMarket{
     background-color: rgba(151, 151, 151, 0.466);
-    width: 30%;
-    height: 500px;
-    padding: 10px 10px;
-    margin: 20px auto;
+    width: 300px;
+    padding: 30px 40px;
+    margin: 10px 30px;
     position: relative;
+}
+@media screen and (max-width: 768px) {
+    .cardMarket{
+        background-color: rgba(151, 151, 151, 0.466);
+        width: 290px;
+        padding: 10px 10px;
+        margin: 10px auto;
+        position: relative;
+    }
 }
 
 .imagenCard{
     display: block;
-    width: 200px;
-    margin: 0 auto;
+    width: 250px;
+    margin: 20px auto;
     border: solid 10px rgba(177, 177, 177, 0.925);
 }
 
@@ -216,6 +318,30 @@ footer{
     transition: all 0.3 ease;
     cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+    .botonCarrito{
+        font-size: 12px;
+        width: 8rem;
+        padding: 10px;
+    }
+}
+
+/*TIENDAS*/
+.mapa{
+    width: 100vw;
+}
+@media screen and (max-width: 768px) {
+    .mapa{
+        width: 100%;
+        height: 50vh;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .mapa{
+        width:60vw;
+        height: 50vh;
+    }
+}
 
 /*FOOTER*/
 
@@ -234,9 +360,11 @@ footer{
     z-index:100;
 }
 
+
 .my-float{
 	margin-top:16px;
 }
+
 
 .socialroundedico{
     display: inline-block;
@@ -250,8 +378,31 @@ footer{
     border: solid 2px;
     vertical-align: top; 
 }
+@media screen and (max-width: 768px) {
+    .socialroundedico{      
+        object-fit:scale-down;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .socialroundedico{      
+        object-fit:scale-down;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+}
 
 /*CONTACTO*/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max-width, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
 
 .formContacto{
     position: relative;
@@ -280,23 +431,22 @@ footer{
     font-family: "Roboto", sans-serif;
 }
 
+
+
 .boton{
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
-    outline: 0;
     background: #4CAF50;
     width: 15rem;
-    border: 0;
+    border: 10px;
     padding: 15px;
+    margin: 50px;
     color: #FFFFFF;
     font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
 }
 
 .boton:hover,.boton:active,.boton:focus {
-    background: #43A047;
+    background: #43a090;
 }
 
 /*BARRA DE NAVEGACION INFERIOR*/
@@ -308,6 +458,7 @@ footer{
     padding: 0;
     margin: 0;
 }
+
 
 .navfooter li{
     font-size: 1rem;
@@ -330,4 +481,11 @@ footer{
 
 .navfooter li {
     display: inline-block;
+}
+@media screen and (max-width: 768px) {
+    .navfooter li {
+        display:flex;
+        flex-flow: column wrap;
+
+    }
 }

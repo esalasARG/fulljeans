@@ -9,107 +9,127 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body>
-    <header id="Arriba">
+<body class="gridLayout">
+    <header id="arriba">
+        <a href="../index.html">
+            <img src="../images/logo1.png" alt="logotipo de fulljeans" class="logo">
+        </a>
         <nav class="navMenu">
-            <div class="nav">
-                <ul>
-                    <li>
-                        <a href="../index.html">
-                            <img src="../images/logo1.png" alt="logotipo de fulljeans" class="logo">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="./catalogo.html"  class="active">CATALOGO</a>
-                    </li>
-                    <li>
-                        <a href="./promos.html">PROMOS</a>
-                    </li>
-                    <li>
-                        <a href="./tiendas.html">TIENDAS</a>
-                    </li>
-                    <li>
-                        <a href="./contacto.html">CONTACTO</a>
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li>
+                    <a href="../index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="./catalogo.html"  class="active">CATALOGO</a>
+                </li>
+                <li>
+                    <a href="./promos.html">PROMOS</a>
+                </li>
+                <li>
+                    <a href="./tiendas.html">TIENDAS</a>
+                </li>
+                <li>
+                    <a href="./contacto.html">CONTACTO</a>
+                </li>
+            </ul>
         </nav>
     </header>  
-    <section id="tiendaContainer" class="containerMarket">
-        <div class="cardMarket">
-            <p class="discountLabel50">50% OFF</p>
-            <img src="../images/JEAN10.jpg" alt="Jean 1" class="imagenCard">
-            <h3 class="colorRojo text-center">Jean X1</h3>
-            <p class="text-center">Jean achupinado modelo X1</p>
-            <p class="text-center">Precio: $3860</p>
-            <button class="botonCarrito">Ir a comprar</button>
-        </div>
-        <div class="cardMarket">
-            <p class="discountLabel80">80% OFF</p>
-            <img src="../images/JEAN11.jpg" alt="Jean 2" class="imagenCard">
-            <h3 class="colorRojo text-center">Jean skynny X2</h3>
-            <p class="text-center">Jean skynny modelo X2</p>
-            <p class="text-center">Precio: $4960</p>
-            <button class="botonCarrito">Ir a comprar</button>
-        </div>
-        <div class="cardMarket">
-            <img src="../images/JEAN12.jpg" alt="Jean 3" class="imagenCard">
-            <h3 class="colorRojo text-center">Jean C2</h3>
-            <p class="text-center">Jean corte clasico modelo C2</p>
-            <p class="text-center">Precio: $2890</p>
-            <button class="botonCarrito">Ir a comprar</button>
-        </div>
-        <div class="cardMarket">
-            <p class="discountLabel80">80% OFF</p>
-            <img src="../images/JEAN13.jpg" alt="Jean 4" class="imagenCard">
-            <h3 class="colorRojo text-center">Jean Clasico X4</h3>
-            <p class="text-center">Jean clasico modelo X4</p>
-            <p class="text-center">Precio: $3890</p>
-            <button class="botonCarrito">Ir a comprar</button>
-        </div>
-        <div class="cardMarket">
-            <p class="discountLabel50">50% OFF</p>
-            <img src="../images/JEAN14.jpg" alt="Jean 4" class="imagenCard">
-            <h3 class="colorRojo text-center">Jean Clasico X5</h3>
-            <p class="text-center">Jean clasico modelo X5</p>
-            <p class="text-center">Precio: $2890</p>
-            <button class="botonCarrito">Ir a comprar</button>
-        </div>
-        <div class="cardMarket">
-            <img src="../images/JEAN15.jpg" alt="Jean 4" class="imagenCard">
-            <h3 class="colorRojo text-center">Jean Clasico X6</h3>
-            <p class="text-center">Jean clasico modelo X6</p>
-            <p class="text-center">Precio: $2490</p>
-            <button class="botonCarrito">Ir a comprar</button>
-        </div>
-        <div class="cardMarket">
-            <img src="../images/JEAN16.jpg" alt="Jean 4" class="imagenCard">
-            <h3 class="colorRojo text-center">Jean Clasico X11</h3>
-            <p class="text-center">Jean clasico modelo X11</p>
-            <p class="text-center">Precio: $2490</p>
-            <button class="botonCarrito">Ir a comprar</button>
-        </div>
-        <div class="cardMarket">
-            <img src="../images/JEAN17.jpg" alt="Jean 4" class="imagenCard">
-            <h3 class="colorRojo text-center">Jean Clasico X12</h3>
-            <p class="text-center">Jean clasico modelo X12</p>
-            <p class="text-center">Precio: $2490</p>
-            <button class="botonCarrito">Ir a comprar</button>
-        </div>
-        <div class="cardMarket">
-            <img src="../images/JEAN18.jpg" alt="Jean 4" class="imagenCard">
-            <h3 class="colorRojo text-center">Jean Clasico X13</h3>
-            <p class="text-center">Jean clasico modelo X13</p>
-            <p class="text-center">Precio: $2490</p>
-            <button class="botonCarrito">Ir a comprar</button>
-        </div>
+
+    <section id="main" class="containerFlex">
+        <div class="containerMarket">
+            <div class="cardMarket">
+                <p class="discountLabel50">50% OFF</p>
+                <img src="../images/JEAN10.jpg" alt="Jean 1" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean X1</h3>
+                <p class="text-center">Jean achupinado modelo X1</p>
+                <p class="text-center">Precio: $3860</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <p class="discountLabel80">80% OFF</p>
+                <img src="../images/JEAN11.jpg" alt="Jean 2" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean skynny X2</h3>
+                <p class="text-center">Jean skynny modelo X2</p>
+                <p class="text-center">Precio: $4960</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <img src="../images/JEAN12.jpg" alt="Jean 3" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean C2</h3>
+                <p class="text-center">Jean corte clasico modelo C2</p>
+                <p class="text-center">Precio: $2890</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <p class="discountLabel80">80% OFF</p>
+                <img src="../images/JEAN13.jpg" alt="Jean 4" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean Clasico X4</h3>
+                <p class="text-center">Jean clasico modelo X4</p>
+                <p class="text-center">Precio: $3890</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <p class="discountLabel50">50% OFF</p>
+                <img src="../images/JEAN14.jpg" alt="Jean 4" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean Clasico X5</h3>
+                <p class="text-center">Jean clasico modelo X5</p>
+                <p class="text-center">Precio: $2890</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <img src="../images/JEAN15.jpg" alt="Jean 4" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean Clasico X6</h3>
+                <p class="text-center">Jean clasico modelo X6</p>
+                <p class="text-center">Precio: $2490</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <img src="../images/JEAN16.jpg" alt="Jean 4" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean Clasico X11</h3>
+                <p class="text-center">Jean clasico modelo X11</p>
+                <p class="text-center">Precio: $2490</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <img src="../images/JEAN17.jpg" alt="Jean 4" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean Clasico X12</h3>
+                <p class="text-center">Jean clasico modelo X12</p>
+                <p class="text-center">Precio: $2490</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <img src="../images/JEAN18.jpg" alt="Jean 4" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean Clasico X13</h3>
+                <p class="text-center">Jean clasico modelo X13</p>
+                <p class="text-center">Precio: $2490</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <img src="../images/JEAN19.jpg" alt="Jean 4" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean Clasico X14</h3>
+                <p class="text-center">Jean clasico modelo X14</p>
+                <p class="text-center">Precio: $2490</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <img src="../images/JEAN20.jpg" alt="Jean 4" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean Clasico X15</h3>
+                <p class="text-center">Jean clasico modelo X15</p>
+                <p class="text-center">Precio: $2490</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+            <div class="cardMarket">
+                <img src="../images/JEAN21.jpg" alt="Jean 4" class="imagenCard">
+                <h3 class="colorRojo text-center">Jean Clasico X16</h3>
+                <p class="text-center">Jean clasico modelo X16</p>
+                <p class="text-center">Precio: $2490</p>
+                <button class="botonCarrito">Ir a comprar</button>
+            </div>
+        </div>    
     </section>
-    
-    <a href="#Arriba">SUBIR</a>
+
     <footer>
+        <a href="#arriba">SUBIR</a>
         <div class="navfooter">
             <ul>
                 <li>
@@ -154,7 +174,8 @@
             </ul>
         </div>
         <div>
-            <p>Todos los derechos reservados © Powered by Elias Salas @ CODERHOUSE</p>
+            <p>Todos los derechos reservados ©</p>
+            <p>Powered by Elias Salas @ CODERHOUSE</p>
         </div>
     </footer>
 </body>
