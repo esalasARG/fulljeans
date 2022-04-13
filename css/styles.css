@@ -57,7 +57,7 @@ body{
         "header"
         "main"
         "footer";
-        grid-template-rows: 100px 4fr 500px; 
+        grid-template-rows: 100px 3fr 500px; 
         grid-template-columns: auto;
     }
 }
@@ -67,7 +67,7 @@ body{
         "header"
         "main"
         "footer";
-        grid-template-rows: 100px 4fr 500px; 
+        grid-template-rows: 100px 2fr 500px; 
         grid-template-columns: auto;
     }
 }
