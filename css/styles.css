@@ -57,7 +57,7 @@ body{
         "header"
         "main"
         "footer";
-        grid-template-rows: 100px 4fr 500px; 
+        grid-template-rows: 100px 3fr 500px; 
         grid-template-columns: auto;
     }
 }
@@ -67,7 +67,7 @@ body{
         "header"
         "main"
         "footer";
-        grid-template-rows: 100px 4fr 500px; 
+        grid-template-rows: 100px 2fr 500px; 
         grid-template-columns: auto;
     }
 }
@@ -165,10 +165,9 @@ footer{
     line-height: 6rem;
     padding-left: 2rem;
 }
-
 @media screen and (max-width: 768px) {
     .navMenu li{
-        font-size: 0.5rem;
+        font-size: 1rem;
         line-height: 3rem;
         height: 3rem;
         padding-left: 1rem;
