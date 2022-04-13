@@ -6,53 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FULL JEANS</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="gridLayout">
     <header id="arriba"> 
-        <div class="headerContainer">
-            <a href="index.html">
-                <img src="images/logo1.png" alt="logotipo de fulljeans" class="logo">
-            </a>
-            <nav class="navMenu">
-                <ul>
-                    <li>
-                        <a href="index.html" class="active">HOME</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navMenu">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="images/logo1.png" alt="logotipo de fulljeans" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="index.html">HOME</a>
                     </li>
-                    <li>
-                        <a href="pages/catalogo.html">CATALOGO</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/catalogo.html">CATALOGO</a>
                     </li>
-                    <li>
-                        <a href="pages/promos.html">PROMOS</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/promos.html">PROMOS</a>
                     </li>
-                    <li>
-                        <a href="pages/tiendas.html">TIENDAS</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/tiendas.html">TIENDAS</a>
                     </li>
-                    <li>
-                        <a href="pages/contacto.html">CONTACTO</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacto.html">CONTACTO</a>
                     </li>
                 </ul>
-            </nav>
-        </div>   
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                </div>
+            </div>
+        </nav>
     </header>  
     
     <section id="main" class="containerFlex">
         <h2>F/W 2022 HIGHLIGHTS</h2>
         <div class="containerMain">
-            <img src="./images/JEAN10.jpg" alt="Jean 10" class="imagenCard">
-            <img src="./images/JEAN11.jpg" alt="Jean 11" class="imagenCard">
-            <img src="./images/JEAN12.jpg" alt="Jean 12" class="imagenCard">
-            <img src="./images/JEAN13.jpg" alt="Jean 13" class="imagenCard">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="./images/JEAN10.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./images/JEAN11.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/JEAN12.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/JEAN13.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>   
+        <h2>SUMMER SALE</h2>
         <div class="containerMain">
-            <img src="./images/JEAN19.jpg" alt="Jean 19" class="imagenCard">
-            <img src="./images/JEAN20.jpg" alt="Jean 20" class="imagenCard">
-            <img src="./images/JEAN21.jpg" alt="Jean 21" class="imagenCard">
-            <img src="./images/JEAN22.jpg" alt="Jean 22" class="imagenCard">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="./images/JEAN19.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./images/JEAN20.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/JEAN21.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/JEAN22.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>   
     </section>
-
+    
     <section id="anuncios" class="containerFlexChico">
         <div class="containerAnuncios">
             <img src="images/homedetalles.jpg" alt="home detalles" class="imagenesFijas">
@@ -86,8 +135,8 @@
                 <a href="">|</a>
             </li>
             <li>
-                <input type="email" name="" id="" placeholder="email">
-                <button name="suscribir">¡Sucribirme!</button>
+                <input type="email" name="" id="" placeholder="tuemail@mail.com">
+                <button name="suscribir" class="btn btn-outline-success" type="submit">¡Sucribirme!</button>
             </li>
             <li>
                 <a href=""><img src="./images/instagramico.png" alt="" class="socialroundedico"></a>
@@ -106,5 +155,6 @@
             <p>Powered by Elias Salas @ CODERHOUSE</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
