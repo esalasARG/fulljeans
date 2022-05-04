@@ -1,0 +1,454 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import "variables", "mixins";
+
+html{
+    font: 62.5%;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+
+    body{
+        text-align: center;
+        color: $colorFuentes;
+        background: $backgroundColor;
+
+        h1{
+            font-size: 3rem;
+        }
+    
+        h2{
+            color: $colorSecundarioFuentes;
+            font-size: 2rem;
+        }
+    
+        p {
+            font-size: 1rem;
+        }
+        
+        a{
+            display: inline;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        ul{
+            padding: 0;
+            margin: 0;
+        }
+        
+    }
+}
+
+/*LAYOUT*/
+
+.gridLayout{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "anuncios"
+    "footer";
+    grid-template-rows: 200px 10fr 150px 500px; 
+    grid-template-columns: auto;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+@media screen and (max-width: 1024px) {
+	.gridLayout {
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        grid-template-rows: 170px 3fr 600px; 
+    }
+}
+@media screen and (max-width: 768px) {
+	.gridLayout {
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        grid-template-rows: 140px 3fr 700px;
+    }
+}
+
+header{
+    grid-area: header;
+}
+
+section#main{
+    grid-area: main;
+    @include flexColumnCenter;
+}
+
+section#anuncios{
+    grid-area: anuncios;     
+    @include flexColumnCenter;
+}
+@media screen and (max-width: 768px) {
+	section#anuncios{
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+	section#anuncios{
+        display: none;
+    }
+}
+
+footer{
+    grid-area: footer;
+}
+
+.containerMain{
+    display: flex;
+    justify-content:space-evenly;
+    width: 70%;
+    flex-flow: row wrap;
+}
+
+.containerAnuncios{
+    @include flexRowCenter;
+}
+
+/*HEADER*/
+
+.logo{
+    width: 8rem;
+}
+@media screen and (max-width: 1024px) {
+    .logo{
+        width: 7rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .logo{
+        width: 6rem;
+    }
+}
+
+.logo:hover {
+    background-color: #ffffff;
+}
+
+.navMenu{
+    z-index: 500;
+}
+
+.navMenu a{
+    font-size: 1.8rem;
+}
+@media screen and (max-width: 1024px) {
+    .navMenu a{
+        font-size: 1.5rem;
+    }
+}
+
+.navMenu ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navMenu a:hover {
+    background-color: $colorHover;
+}
+
+/*HOME*/
+
+.espaciador{
+    height: 50px;
+}
+
+.containerFlex{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.imagenesFijas{
+    width: 80%;
+    object-fit:scale-down;
+}
+
+.imagenesPromos{
+    width: 70%;
+    margin: 5px 0;
+    object-fit:fill;
+}
+@media screen and (max-width: 1024px) {
+    .imagenesPromos{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .imagenesPromos{
+        width: 90%;
+    }
+}
+
+
+/*CATALOGO*/
+
+.discountLabel50{
+    background-color: rgba(0, 184, 0, 0.562);
+    font-weight: 300;
+    padding: 10px 20px;
+    font-size: medium;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+@media screen and (max-width: 768px) {
+    .discountLabel50{
+        font-weight: 100;
+        padding: 5px 10px;
+        font-size: small;
+    }
+}
+
+.discountLabel80{
+    background-color: rgba(236, 142, 0, 0.692);
+    font-weight: 300;
+    padding: 10px 20px;
+    font-size: medium;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+@media screen and (max-width: 768px) {
+    .discountLabel80{
+        font-weight: 100;
+        padding: 5px 10px;
+        font-size: small;
+    }
+}
+
+.containerMarket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+@media screen and (max-width: 768px) {
+    .containerMarket{
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .containerMarket{
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+}
+
+.cardMarket{
+    background-color: $backgroundCards;
+    width: 300px;
+    padding: 30px 40px;
+    margin: 20px 30px;
+    position: relative;
+}
+@media screen and (max-width: 768px) {
+    .cardMarket{
+        width: 290px;
+        padding: 10px 10px;
+        margin: 20px auto;
+    }
+}
+
+.cardMarket:hover{
+    transform: translate(-1px,1px);
+    transform: rotate(-0.5deg);
+    transition: 1000ms;
+    animation-timing-function: ease-in-out;
+}
+
+.imagenCard{
+    display: block;
+    width: 220px;
+    margin: 20px auto;
+    border: solid 10px rgba(177, 177, 177, 0.925);
+}
+
+.imagenCard:hover{
+    transform: scale(1.2);
+    transition: 700ms;
+    animation-timing-function:ease-in-out;
+}
+
+.botonCarrito{
+    border: dashed;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    background: rgba(32, 32, 32, 0.521);
+    border-color: rgba(255, 255, 255, 0.89);
+    border-style: ridge;
+    width: 80%;
+    border: 10px;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .botonCarrito{
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+.botonCarrito:hover{
+    background: $colorHover;
+}
+
+/*TIENDAS*/
+.mapa{
+    width: 70vw;
+    height: 70vh;
+}
+@media screen and (max-width: 768px) {
+    .mapa{
+        width: 100%;
+        height: 50vh;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .mapa{
+        width:60vw;
+        height: 50vh;
+    }
+}
+
+/*FOOTER*/
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+
+
+.my-float{
+	margin-top:16px;
+}
+
+.containerRedes{
+    @include flexRowCenter;
+    @include containers;
+}
+
+.socialroundedico{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 1px;
+    vertical-align: top; 
+}
+
+.socialroundedicolink{
+    margin: 20px;
+}
+
+/*CONTACTO*/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max-width, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+.formContacto{
+    position: relative;
+    z-index: 1;
+    background: rgb(0,0,0);
+    max-width: 50%;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+@media screen and (max-width: 768px) {
+    .formContacto {
+        max-width: 360px;
+    }
+}
+
+.formContacto input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 100%;
+    border: 0;
+    margin: 0 auto 20px;
+    padding: 15px;
+}
+
+.formContacto label {
+    font-family: "Roboto", sans-serif;
+}
+
+.botonContacto{
+    text-transform: uppercase;
+    width: 15rem;
+    border: 10px;
+    padding: 15px;
+    margin: 50px;
+    font-size: 14px;
+}
+
+.botonContacto:hover,.boton:active,.boton:focus {
+    background: #43a090;
+    color: $colorFuentes;
+}
+
+/*BARRA DE NAVEGACION INFERIOR*/
+
+.navfooter ul{
+    list-style: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navfooter a {
+    text-decoration: none;
+    color: $colorFuentes;
+    display: block;
+    transition: .3s background-color;
+}
+
+.navfooter a:hover {
+    color: aqua;
+}
+
+.navfooter li {
+    display: inline-block;
+}
+@media screen and (max-width: 768px) {
+    .navfooter li {
+        @include flexRowCenter;
+    }
+}
+
+.copyright{
+    padding: 40px;
+}

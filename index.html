@@ -36,10 +36,6 @@
                         <a class="nav-link" href="pages/contacto.html">CONTACTO</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
                 </div>
             </div>
         </nav>
@@ -47,31 +43,29 @@
     
     <section id="main" class="containerFlex">
         <h2>F/W 2022 HIGHLIGHTS</h2>
-        <div class="containerMain">
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000">
-                        <img src="./images/JEAN10.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <img src="./images/JEAN11.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <img src="./images/JEAN12.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <img src="./images/JEAN13.jpg" class="d-block w-100" alt="...">
-                    </div>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="./images/JEAN10.jpg" class="d-block w-100" alt="...">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./images/JEAN11.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./images/JEAN12.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./images/JEAN13.jpg" class="d-block w-100" alt="...">
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>   
         <span class="espaciador"></span>
         <h2>SUMMER SALE HASTA 80% OFF</h2>
@@ -84,13 +78,14 @@
         </div>   
     </section>
     
-    <section id="anuncios" class="containerFlexChico">
-        <div class="containerAnuncios">
-            <img src="images/homedetalles.jpg" alt="home detalles" class="imagenesFijas">
-        </div>    
+    <section id="anuncios">
+        <img src="images/homedetalles.jpg" alt="home detalles" class="imagenesFijas">
     </section>
     
     <footer>
+        <a href="#arriba">SUBIR</a>
+
+        <hr>
         <ul class="navfooter">
             <li>
                 <a href="">¿Como comprar?</a>
@@ -113,25 +108,14 @@
             <li>
                 <a href="">Ser parte</a>
             </li>
-            <li>
-                <a href="">|</a>
-            </li>
-            <li>
-                <input type="email" name="" id="" placeholder="tuemail@mail.com">
-                <button name="suscribir" class="btn btn-outline-success" type="submit">¡Sucribirme!</button>
-            </li>
-            <li>
-                <a href=""><img src="./images/instagramico.png" alt="" class="socialroundedico"></a>
-            </li>
-            <li>
-                <a href=""><img src="./images/facebookico.png" alt="" class="socialroundedico"></a>
-            </li>
-            <li>
-                <a href="" class="float">
-                    <i class="fa fa-whatsapp my-float"></i>
-                </a>
-            </li>
         </ul>
+        <div class="containerRedes">
+            <a href="" class="socialroundedicolink"><img src="./images/instagramico.png" alt="" class="socialroundedico"></a>
+            <a href="" class="socialroundedicolink"><img src="./images/facebookico.png" alt="" class="socialroundedico"></a>
+        </div>
+        <a href="" class="float">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
         <div>
             <p class="copyright">Todos los derechos reservados © Powered by Elias Salas @ CODERHOUSE</p>
         </div>
