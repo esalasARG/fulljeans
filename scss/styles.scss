@@ -13,12 +13,7 @@ html{
         background: $backgroundColor;
 
         h1{
-            font-size: 3rem;
-        }
-    
-        h2{
-            color: $colorSecundarioFuentes;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     
         p {
@@ -377,7 +372,7 @@ footer{
     position: relative;
     z-index: 1;
     background: rgb(0,0,0);
-    max-width: 50%;
+    max-width: 60%;
     margin: 0 auto 100px;
     padding: 45px;
     text-align: center;
