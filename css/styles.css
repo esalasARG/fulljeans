@@ -7,12 +7,9 @@ html {
   html body {
     text-align: center;
     color: white;
-    background: linear-gradient(0deg, black 0%, #414141 23%, white 100%); }
+    background: linear-gradient(0deg, black 0%, #4d4d4d 33%, #b7b7b7 100%); }
     html body h1 {
-      font-size: 3rem; }
-    html body h2 {
-      color: black;
-      font-size: 2rem; }
+      font-size: 1.5rem; }
     html body p {
       font-size: 1rem; }
     html body a {
@@ -306,7 +303,7 @@ footer {
   position: relative;
   z-index: 1;
   background: black;
-  max-width: 50%;
+  max-width: 60%;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
