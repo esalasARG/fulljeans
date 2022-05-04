@@ -1,6 +1,6 @@
 @mixin flexRowCenter{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
@@ -15,4 +15,8 @@
 @mixin containers{
     padding: 10px;
     margin: 10px;
+}
+
+@mixin sombras{
+    box-shadow: 0 0 20px 0 $colorSombras, 0 5px 5px 0 $colorSombras;
 }

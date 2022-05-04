@@ -7,7 +7,7 @@ html {
   html body {
     text-align: center;
     color: white;
-    background: linear-gradient(0deg, black 0%, #4d4d4d 33%, #b7b7b7 100%); }
+    background: linear-gradient(0deg, black 0%, #717171 23%, #b7b7b7 100%); }
     html body h1 {
       font-size: 1.5rem; }
     html body p {
@@ -24,7 +24,7 @@ html {
 .gridLayout {
   display: grid;
   grid-template-areas: "header" "main" "anuncios" "footer";
-  grid-template-rows: 200px 10fr 150px 500px;
+  grid-template-rows: 150px 10fr 150px 500px;
   grid-template-columns: auto;
   column-gap: 10px;
   row-gap: 10px; }
@@ -32,12 +32,12 @@ html {
 @media screen and (max-width: 1024px) {
   .gridLayout {
     grid-template-areas: "header" "main" "footer";
-    grid-template-rows: 170px 3fr 600px; } }
+    grid-template-rows: 133px 3fr 600px; } }
 
 @media screen and (max-width: 768px) {
   .gridLayout {
     grid-template-areas: "header" "main" "footer";
-    grid-template-rows: 140px 3fr 700px; } }
+    grid-template-rows: 116px 3fr 700px; } }
 
 header {
   grid-area: header; }
@@ -75,7 +75,7 @@ footer {
 
 .containerAnuncios {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center; }
 
@@ -95,7 +95,13 @@ footer {
   background-color: #ffffff; }
 
 .navMenu {
-  z-index: 500; }
+  z-index: 500;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
+  .navMenu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0; }
 
 .navMenu a {
   font-size: 1.8rem; }
@@ -104,33 +110,31 @@ footer {
   .navMenu a {
     font-size: 1.5rem; } }
 
-.navMenu ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  margin: 0; }
-
 .navMenu a:hover {
   background-color: #005f5f; }
 
 /*HOME*/
+.parallax {
+  background-image: url("../images/parallax1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
 .espaciador {
   height: 50px; }
-
-.containerFlex {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  width: 100%; }
 
 .imagenesFijas {
   width: 80%;
   object-fit: scale-down; }
 
 .imagenesPromos {
-  width: 70%;
+  width: 40%;
   margin: 5px 0;
-  object-fit: fill; }
+  object-fit: fill;
+  border: solid 2px rgba(240, 240, 240, 0.525);
+  border-radius: 5%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
 
 @media screen and (max-width: 1024px) {
   .imagenesPromos {
@@ -148,13 +152,8 @@ footer {
   font-size: medium;
   position: absolute;
   top: -20px;
-  right: -20px; }
-
-@media screen and (max-width: 768px) {
-  .discountLabel50 {
-    font-weight: 100;
-    padding: 5px 10px;
-    font-size: small; } }
+  right: -20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
 
 .discountLabel80 {
   background-color: rgba(236, 142, 0, 0.692);
@@ -163,80 +162,49 @@ footer {
   font-size: medium;
   position: absolute;
   top: -20px;
-  right: -20px; }
-
-@media screen and (max-width: 768px) {
-  .discountLabel80 {
-    font-weight: 100;
-    padding: 5px 10px;
-    font-size: small; } }
+  right: -20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
 
 .containerMarket {
   display: flex;
-  align-items: center;
+  flex-flow: row wrap;
   justify-content: center;
-  flex-flow: row wrap; }
-
-@media screen and (max-width: 768px) {
-  .containerMarket {
-    flex-flow: column nowrap;
-    justify-content: center; } }
-
-@media screen and (max-width: 1024px) {
-  .containerMarket {
-    flex-flow: column wrap;
-    justify-content: center; } }
+  align-items: center; }
 
 .cardMarket {
-  background-color: rgba(151, 151, 151, 0.466);
+  background-color: rgba(122, 143, 144, 0.69);
   width: 300px;
   padding: 30px 40px;
-  margin: 20px 30px;
-  position: relative; }
-
-@media screen and (max-width: 768px) {
-  .cardMarket {
-    width: 290px;
-    padding: 10px 10px;
-    margin: 20px auto; } }
+  margin: 30px;
+  position: relative;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
 
 .cardMarket:hover {
   transform: translate(-1px, 1px);
-  transform: rotate(-0.5deg);
+  transform: rotate(-0.2deg);
   transition: 1000ms;
   animation-timing-function: ease-in-out; }
 
 .imagenCard {
-  display: block;
   width: 220px;
   margin: 20px auto;
-  border: solid 10px rgba(177, 177, 177, 0.925); }
+  border: solid 5px rgba(240, 240, 240, 0.525); }
 
 .imagenCard:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 700ms;
   animation-timing-function: ease-in-out; }
 
 .botonCarrito {
-  border: dashed;
-  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   background: rgba(32, 32, 32, 0.521);
-  border-color: rgba(255, 255, 255, 0.89);
-  border-style: ridge;
+  color: white;
   width: 80%;
-  border: 10px;
+  border: 15px;
   padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer; }
-
-@media screen and (max-width: 768px) {
-  .botonCarrito {
-    font-size: 12px;
-    padding: 10px; } }
+  border-radius: 10%;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
 
 .botonCarrito:hover {
   background: #005f5f; }
@@ -244,17 +212,8 @@ footer {
 /*TIENDAS*/
 .mapa {
   width: 70vw;
-  height: 70vh; }
-
-@media screen and (max-width: 768px) {
-  .mapa {
-    width: 100%;
-    height: 50vh; } }
-
-@media screen and (max-width: 1024px) {
-  .mapa {
-    width: 60vw;
-    height: 50vh; } }
+  height: 70vh;
+  border-radius: 5%; }
 
 /*FOOTER*/
 .float {
@@ -263,20 +222,19 @@ footer {
   height: 60px;
   bottom: 40px;
   right: 40px;
-  background-color: #25d366;
-  color: #FFF;
+  background-color: #31da6ed8;
+  color: white;
   border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
+  font-size: 2rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341);
   z-index: 100; }
 
 .my-float {
-  margin-top: 16px; }
+  margin-top: 15px; }
 
 .containerRedes {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -287,57 +245,50 @@ footer {
   height: 50px;
   border-radius: 50%;
   border: solid 1px;
-  vertical-align: top; }
+  border-color: rgba(150, 150, 150, 0.2);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
 
 .socialroundedicolink {
   margin: 20px; }
 
 /*CONTACTO*/
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(max-width, 1fr));
-  gap: 1rem;
-  width: 100%; }
-
 .formContacto {
   position: relative;
   z-index: 1;
-  background: black;
-  max-width: 60%;
+  background: rgba(100, 100, 100, 0.568);
+  max-width: 70%;
   margin: 0 auto 100px;
-  padding: 45px;
+  padding: 55px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); }
-
-@media screen and (max-width: 768px) {
-  .formContacto {
-    max-width: 360px; } }
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
 
 .formContacto input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  box-sizing: border-box;
-  font-size: 14px;
+  font-size: 1rem;
   width: 100%;
   border: 0;
   margin: 0 auto 20px;
-  padding: 15px; }
-
-.formContacto label {
-  font-family: "Roboto", sans-serif; }
-
-.botonContacto {
-  text-transform: uppercase;
-  width: 15rem;
-  border: 10px;
   padding: 15px;
-  margin: 50px;
-  font-size: 14px; }
+  text-align: center; }
+
+.formContacto textarea {
+  font-size: 1rem;
+  width: 100%;
+  border: 0;
+  margin: 0 auto 20px;
+  padding: 15px;
+  text-align: center; }
 
 .botonContacto:hover, .boton:active, .boton:focus {
   background: #43a090;
   color: white; }
+
+.boxCanales {
+  background-color: rgba(122, 143, 144, 0.69);
+  width: 300px;
+  padding: 30px 40px;
+  margin: 30px;
+  position: relative;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
 
 /*BARRA DE NAVEGACION INFERIOR*/
 .navfooter ul {
@@ -348,9 +299,7 @@ footer {
   width: 100%; }
 
 .navfooter a {
-  text-decoration: none;
   color: white;
-  display: block;
   transition: .3s background-color; }
 
 .navfooter a:hover {
@@ -362,7 +311,7 @@ footer {
 @media screen and (max-width: 768px) {
   .navfooter li {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center; } }
 
