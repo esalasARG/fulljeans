@@ -36,113 +36,96 @@
                         <a class="nav-link active" href="./contacto.html">CONTACTO</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
                 </div>
             </div>
         </nav>
     </header> 
     
     
-    <section id="main">
+    <section id="main" class="containerFlex">
         <div>
             <h2>Contacto</h2>
         </div>
-        <div class="grid">
+        <div>
+            <form class="formContacto">
+                <h3>Escribinos y nos pondremos en contacto con vos en breve:</h3>
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" required placeholder="tu nombre"> 
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="mail" required placeholder="tu email"> 
+                </div>
+                <div>
+                    <label for="tel">Teléfono</label>
+                    <input type="tel" id="telefono" required placeholder="tu teléfono"> 
+                </div>
+                <div>
+                    <label for="comentarios">Tus comentarios</label>
+                    <input type="text" id="comentario" placeholder="tu comentario"> 
+                </div>
+                <div>
+                    <input type="submit" value="ENVIAR" class="botonContacto">
+                </div>
+            </form>
+        </div>
+        <div>
             <div>
-                <div>
-                    <p>Envianos tu CV a empleos@fulljeans.com.ar</p>
-                </div>
-                <div>
-                    <p>(011) 6458-9786 - Canal Whatsapp de lunes a viernes de 8 a 17 hs</p>
-                </div>
-                <div>
-                    <p>(011) 3598-7489</p>
-                </div>
-                <div>
+                <p>Canal Whatsapp de lunes a viernes de 8 a 17 hs</p>
+                <p>(011) 6458-9786</p>
+            </div>
+            <div>
+                <p>Canal Telefónico de lunes a viernes de 9 a 18 hs</p>
+                <p>(011) 3598-7489</p>
+            </div>
+            <div>
+                <p>Canal Email de lunes a viernes de 10 a 20 hs </p>
                 <a href="mailto:ventas.eshop@fulljeans.com.ar">ventas.eshop@fulljeans.com.ar</a>
-                </div>
             </div>
             <div>
-                <form class="formContacto">
-                    <h3>Escribinos y nos pondremos en contacto con vos en breve:</h3>
-                    <div>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" required placeholder="tu nombre"> 
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" id="mail" required placeholder="tu email"> 
-                    </div>
-                    <div>
-                        <label for="tel">Teléfono</label>
-                        <input type="tel" id="telefono" required placeholder="tu teléfono"> 
-                    </div>
-                    <div>
-                        <label for="comentarios">Tus comentarios</label>
-                        <input type="text" id="comentario" placeholder="tu comentario"> 
-                    </div>
-                    <div>
-                        <input type="submit" value="ENVIAR" class="botonContacto">
-                    </div>
-                </form>
+                <p>Envianos tu CV a empleos@fulljeans.com.ar</p>
             </div>
-        </div>    
+        </div>   
     </section>
 
-    <section id="anuncios" class="containerFlexChico">
-        <div class="containerAnuncios">
-            <img src="../images/homedetalles.jpg" alt="home detalles" class="imagenesFijas">
-        </div>    
+    <section id="anuncios">
+        <img src="../images/homedetalles.jpg" alt="home detalles" class="imagenesFijas"> 
     </section>
 
     <footer>
         <a href="#arriba">SUBIR</a>
-        <div class="navfooter">
-            <ul>
-                <li>
-                    <a href="">¿Como comprar?</a>
-                </li>
-                <li>
-                    <a href="">|</a>
-                </li>
-                <li>
-                    <a href="">Preguntas frecuentes</a>
-                </li>
-                <li>
-                    <a href="">|</a>
-                </li>
-                <li>
-                    <a href="">Cambios y devoluciones</a>
-                </li>
-                <li>
-                    <a href="">|</a>
-                </li>
-                <li>
-                    <a href="">Ser parte</a>
-                </li>
-                <li>
-                    <a href="">|</a>
-                </li>
-                <li>
-                    <input type="email" name="" id="" placeholder="tuemail@mail.com">
-                    <button name="suscribir" class="btn btn-outline-success" type="submit">¡Sucribirme!</button>
-                </li>
-                <li>
-                    <a href=""><img src="../images/instagramico.png" alt="" class="socialroundedico"></a>
-                </li>
-                <li>
-                    <a href=""><img src="../images/facebookico.png" alt="" class="socialroundedico"></a>
-                </li>
-                <li>
-                    <a href="" class="float">
-                        <i class="fa fa-whatsapp my-float"></i>
-                    </a>
-                </li>
-            </ul>
+        <hr>
+        <ul class="navfooter">
+            <li>
+                <a href="">¿Como comprar?</a>
+            </li>
+            <li>
+                <a href="">|</a>
+            </li>
+            <li>
+                <a href="">Preguntas frecuentes</a>
+            </li>
+            <li>
+                <a href="">|</a>
+            </li>
+            <li>
+                <a href="">Cambios y devoluciones</a>
+            </li>
+            <li>
+                <a href="">|</a>
+            </li>
+            <li>
+                <a href="">Ser parte</a>
+            </li>
+        </ul>
+        <div class="containerRedes">
+            <a href="" class="socialroundedicolink"><img src="../images/instagramico.png" alt="" class="socialroundedico"></a>
+            <a href="" class="socialroundedicolink"><img src="../images/facebookico.png" alt="" class="socialroundedico"></a>
         </div>
+        <a href="" class="float">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
         <div>
             <p class="copyright">Todos los derechos reservados © Powered by Elias Salas @ CODERHOUSE</p>
         </div>
