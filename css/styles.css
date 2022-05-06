@@ -308,6 +308,9 @@ footer {
 .modal {
   color: black; }
 
+.width80 {
+  width: 80%; }
+
 .navfooter a {
   color: white;
   transition: .3s background-color; }
