@@ -298,6 +298,16 @@ footer {
   margin: 0;
   width: 100%; }
 
+.notActive {
+  pointer-events: none;
+  cursor: default; }
+
+.popover {
+  color: black; }
+
+.modal {
+  color: black; }
+
 .navfooter a {
   color: white;
   transition: .3s background-color; }
