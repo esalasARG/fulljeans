@@ -24,6 +24,9 @@ html{
             display: inline;
             text-decoration: none;
             font-size: 1.2rem;
+            &:visited{
+                color: $colorFuentes;
+            }
         }
 
         ul{
@@ -80,11 +83,6 @@ section#anuncios{
     grid-area: anuncios;     
     @include flexColumnCenter;
 }
-@media screen and (max-width: 768px) {
-	section#anuncios{
-        display: none;
-    }
-}
 @media screen and (max-width: 1024px) {
 	section#anuncios{
         display: none;
@@ -110,6 +108,10 @@ footer{
 
 .logo{
     width: 8rem;
+
+    &:hover{
+        background-color: transparent;
+    }
 }
 @media screen and (max-width: 1024px) {
     .logo{
@@ -122,10 +124,6 @@ footer{
     }
 }
 
-.logo:hover {
-    background-color: #ffffff;
-}
-
 .navMenu{
     z-index: 500;
     @include sombras;
@@ -135,19 +133,18 @@ footer{
         padding: 0;
         margin: 0;
     }
-}
 
-.navMenu a{
-    font-size: 1.8rem;
+    a{
+        font-size: 1.8rem;
+        &:hover {
+            background-color: $colorHover;
+        }
+    }
 }
 @media screen and (max-width: 1024px) {
     .navMenu a{
         font-size: 1.5rem;
     }
-}
-
-.navMenu a:hover {
-    background-color: $colorHover;
 }
 
 /*HOME*/
@@ -224,25 +221,23 @@ footer{
     margin: 30px;
     position: relative;
     @include sombras;
-}
-
-.cardMarket:hover{
-    transform: translate(-1px,1px);
-    transform: rotate(-0.2deg);
-    transition: 1000ms;
-    animation-timing-function: ease-in-out;
+    &:hover{
+        transform: translate(-1px,1px);
+        transform: rotate(-0.2deg);
+        transition: 1000ms;
+        animation-timing-function: ease-in-out;
+    }
 }
 
 .imagenCard{
     width: 220px;
     margin: 20px auto;
     border: solid 5px $borderImageColorCards;
-}
-
-.imagenCard:hover{
-    transform: scale(1.1);
-    transition: 700ms;
-    animation-timing-function:ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+        transition: 700ms;
+        animation-timing-function:ease-in-out;
+    }
 }
 
 .botonCarrito{
@@ -255,10 +250,10 @@ footer{
     border-radius: 10%;
     cursor: pointer;
     @include sombras;
-}
-
-.botonCarrito:hover{
-    background: $colorHover;
+    &:hover{
+        background: $colorHover;
+    }
+    
 }
 
 /*TIENDAS*/
@@ -353,42 +348,26 @@ footer{
 
 /*BARRA DE NAVEGACION INFERIOR*/
 
-.navfooter ul{
-    list-style: none;
+.navfooter{
     background-color: transparent;
     padding: 0;
     margin: 0;
     width: 100%;
-}
+    ul{
+        list-style: none;
+    }
 
-.notActive { 
-    pointer-events: none; 
-    cursor: default;
-} 
-
-.popover{
-    color: $colorSecundarioFuentes;
-}
-
-.modal{
-    color: $colorSecundarioFuentes;
-}
-
-.width80{
-    width:80%;
-}
-
-.navfooter a {
-    color: $colorFuentes;
-    transition: .3s background-color;
-}
-
-.navfooter a:hover {
-    color: aqua;
-}
-
-.navfooter li {
-    display: inline-block;
+    li {
+        display: inline-block;
+    }
+    
+    a{
+        color: $colorFuentes;
+        transition: .3s background-color;
+        &:hover {
+            color: aqua;
+        }
+    }
 }
 @media screen and (max-width: 768px) {
     .navfooter li {
@@ -398,4 +377,28 @@ footer{
 
 .copyright{
     padding: 40px;
+}
+
+.width80{
+    width:80%;
+}
+
+.notActive { 
+    pointer-events: none; 
+    cursor: default;
+} 
+
+.popover{
+    color: $colorSecundarioFuentes;
+    @include sombras;
+}
+
+.modal{
+    color: $colorSecundarioFuentes;
+    @include sombras;
+}
+
+.mail{
+    color: $colorFuentes;
+    font-size: small;
 }
