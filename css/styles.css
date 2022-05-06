@@ -16,6 +16,8 @@ html {
       display: inline;
       text-decoration: none;
       font-size: 1.2rem; }
+      html body a:visited {
+        color: white; }
     html body ul {
       padding: 0;
       margin: 0; }
@@ -56,10 +58,6 @@ section#anuncios {
   align-items: center;
   justify-content: center; }
 
-@media screen and (max-width: 768px) {
-  section#anuncios {
-    display: none; } }
-
 @media screen and (max-width: 1024px) {
   section#anuncios {
     display: none; } }
@@ -82,6 +80,8 @@ footer {
 /*HEADER*/
 .logo {
   width: 8rem; }
+  .logo:hover {
+    background-color: transparent; }
 
 @media screen and (max-width: 1024px) {
   .logo {
@@ -91,9 +91,6 @@ footer {
   .logo {
     width: 6rem; } }
 
-.logo:hover {
-  background-color: #ffffff; }
-
 .navMenu {
   z-index: 500;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
@@ -102,16 +99,14 @@ footer {
     text-align: center;
     padding: 0;
     margin: 0; }
-
-.navMenu a {
-  font-size: 1.8rem; }
+  .navMenu a {
+    font-size: 1.8rem; }
+    .navMenu a:hover {
+      background-color: #005f5f; }
 
 @media screen and (max-width: 1024px) {
   .navMenu a {
     font-size: 1.5rem; } }
-
-.navMenu a:hover {
-  background-color: #005f5f; }
 
 /*HOME*/
 .parallax {
@@ -178,22 +173,20 @@ footer {
   margin: 30px;
   position: relative;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
-
-.cardMarket:hover {
-  transform: translate(-1px, 1px);
-  transform: rotate(-0.2deg);
-  transition: 1000ms;
-  animation-timing-function: ease-in-out; }
+  .cardMarket:hover {
+    transform: translate(-1px, 1px);
+    transform: rotate(-0.2deg);
+    transition: 1000ms;
+    animation-timing-function: ease-in-out; }
 
 .imagenCard {
   width: 220px;
   margin: 20px auto;
   border: solid 5px rgba(240, 240, 240, 0.525); }
-
-.imagenCard:hover {
-  transform: scale(1.1);
-  transition: 700ms;
-  animation-timing-function: ease-in-out; }
+  .imagenCard:hover {
+    transform: scale(1.1);
+    transition: 700ms;
+    animation-timing-function: ease-in-out; }
 
 .botonCarrito {
   text-transform: uppercase;
@@ -205,9 +198,8 @@ footer {
   border-radius: 10%;
   cursor: pointer;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
-
-.botonCarrito:hover {
-  background: #005f5f; }
+  .botonCarrito:hover {
+    background: #005f5f; }
 
 /*TIENDAS*/
 .mapa {
@@ -284,42 +276,27 @@ footer {
 
 .boxCanales {
   background-color: rgba(122, 143, 144, 0.69);
-  width: 300px;
+  width: 70%;
   padding: 30px 40px;
   margin: 30px;
   position: relative;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
 
 /*BARRA DE NAVEGACION INFERIOR*/
-.navfooter ul {
-  list-style: none;
+.navfooter {
   background-color: transparent;
   padding: 0;
   margin: 0;
   width: 100%; }
-
-.notActive {
-  pointer-events: none;
-  cursor: default; }
-
-.popover {
-  color: black; }
-
-.modal {
-  color: black; }
-
-.width80 {
-  width: 80%; }
-
-.navfooter a {
-  color: white;
-  transition: .3s background-color; }
-
-.navfooter a:hover {
-  color: aqua; }
-
-.navfooter li {
-  display: inline-block; }
+  .navfooter ul {
+    list-style: none; }
+  .navfooter li {
+    display: inline-block; }
+  .navfooter a {
+    color: white;
+    transition: .3s background-color; }
+    .navfooter a:hover {
+      color: aqua; }
 
 @media screen and (max-width: 768px) {
   .navfooter li {
@@ -330,3 +307,22 @@ footer {
 
 .copyright {
   padding: 40px; }
+
+.width80 {
+  width: 80%; }
+
+.notActive {
+  pointer-events: none;
+  cursor: default; }
+
+.popover {
+  color: black;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
+
+.modal {
+  color: black;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.341), 0 5px 5px 0 rgba(0, 0, 0, 0.341); }
+
+.mail {
+  color: white;
+  font-size: small; }
