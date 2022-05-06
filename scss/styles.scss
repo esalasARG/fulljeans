@@ -361,6 +361,19 @@ footer{
     width: 100%;
 }
 
+.notActive { 
+    pointer-events: none; 
+    cursor: default;
+} 
+
+.popover{
+    color: $colorSecundarioFuentes;
+}
+
+.modal{
+    color: $colorSecundarioFuentes;
+}
+
 .navfooter a {
     color: $colorFuentes;
     transition: .3s background-color;
