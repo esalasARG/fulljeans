@@ -20,3 +20,12 @@
 @mixin sombras{
     box-shadow: 0 0 20px 0 $colorSombras, 0 5px 5px 0 $colorSombras;
 }
+
+@mixin dicountLabel{
+    font-weight: bolder;
+    padding: 10px 20px;
+    font-size: large;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
