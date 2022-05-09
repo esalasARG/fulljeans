@@ -2,7 +2,6 @@
 @import "variables", "mixins";
 
 html{
-    font: 62.5%;
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
@@ -14,6 +13,14 @@ html{
 
         h1{
             font-size: 1.5rem;
+        }
+
+        h2{
+            font-size: 1.2rem;
+        }
+
+        h3{
+            font-size: 1.1rem;
         }
     
         p {
@@ -48,6 +55,7 @@ html{
     "footer";
     grid-template-rows: 150px 10fr 150px 500px; 
     grid-template-columns: auto;
+    width: 100%;
     column-gap: 10px;
     row-gap: 10px;
 }
@@ -66,7 +74,7 @@ html{
         "header"
         "main"
         "footer";
-        grid-template-rows: 116px 3fr 700px;
+        grid-template-rows: 116px 3fr 800px;
     }
 }
 
@@ -190,28 +198,43 @@ footer{
 
 .discountLabel50{
     background-color: $colorDiscountLabel50;
-    font-weight: 300;
-    padding: 10px 20px;
-    font-size: medium;
-    position: absolute;
-    top: -20px;
-    right: -20px;
+    @include dicountLabel;
     @include sombras;
+}
+@media screen and (max-width: 1024px) {
+    .discountLabel50{
+        padding: 7px 15px;
+        font-size: medium;
+    }
+}
+@media screen and (max-width: 768px) {
+    .discountLabel50{
+        padding: 5px 12px;
+        font-size: small;
+    }
 }
 
 .discountLabel80{
     background-color: $colorDiscountLabel80;
-    font-weight: 300;
-    padding: 10px 20px;
-    font-size: medium;
-    position: absolute;
-    top: -20px;
-    right: -20px;
+    @include dicountLabel;
     @include sombras;
+}
+@media screen and (max-width: 1024px) {
+    .discountLabel80{
+        padding: 7px 15px;
+        font-size: medium;
+    }
+}
+@media screen and (max-width: 768px) {
+    .discountLabel80{
+        padding: 5px 12px;
+        font-size: small;
+    }
 }
 
 .containerMarket{
     @include flexRowCenter;
+    width: 95%;
 }
 
 .cardMarket{
@@ -228,6 +251,13 @@ footer{
         animation-timing-function: ease-in-out;
     }
 }
+@media screen and (max-width: 768px) {
+    .cardMarket{
+        width: 120px;
+        padding: 7.5px 10px;
+        height: 500px;
+    }
+}
 
 .imagenCard{
     width: 220px;
@@ -239,21 +269,31 @@ footer{
         animation-timing-function:ease-in-out;
     }
 }
+@media screen and (max-width: 768px) {
+    .imagenCard{
+        width: 100%;
+    }
+}
 
 .botonCarrito{
     text-transform: uppercase;
     background: $backgroundBotones;
     color: $colorFuentes;
     width: 80%;
-    border: 15px;
-    padding: 15px;
+    border: 10px;
+    padding: 5px;
     border-radius: 10%;
+    font-size: small;
     cursor: pointer;
     @include sombras;
     &:hover{
         background: $colorHover;
+    } 
+}
+@media screen and (max-width: 768px) {
+    .botonCarrito{
+        font-size: x-small;
     }
-    
 }
 
 /*TIENDAS*/
@@ -269,14 +309,23 @@ footer{
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
-	right:40px;
+	bottom:20px;
+	right:20px;
 	background-color: $fondoBotonWhats;
     color: $colorFuentes;
 	border-radius:50px;
     font-size:2rem;
 	@include sombras;
     z-index:100;
+}
+@media screen and (max-width: 768px) {
+    .float{
+        width:50px;
+	    height:50px;
+	    bottom:10px;
+	    right:10px;
+        font-size:1.3rem;
+    }
 }
 
 .my-float{
@@ -307,28 +356,34 @@ footer{
     position: relative;
     z-index: 1;
     background: $backgroundFormContacto;
-    max-width: 70%;
-    margin: 0 auto 100px;
-    padding: 55px;
+    width: 70%;
+    margin: 10px 10px;
+    padding: 25px;
     text-align: center;
     @include sombras;
+}
+@media screen and (max-width: 1024px) {
+    .formContacto{
+        padding: 15px;
+    }
 }
 
 .formContacto input {
     font-size: 1rem;
-    width: 100%;
+    width: 90%;
     border: 0;
-    margin: 0 auto 20px;
-    padding: 15px;
+    margin: 5px auto;
+    padding: 10px;
     text-align: center;
+    display: block;
 }
 
 .formContacto textarea {
     font-size: 1rem;
-    width: 100%;
+    width: 90%;
     border: 0;
-    margin: 0 auto 20px;
-    padding: 15px;
+    margin: 5px auto;
+    padding: 10px;
     text-align: center;
 }
 
@@ -344,6 +399,12 @@ footer{
     margin: 30px;
     position: relative;
     @include sombras;
+}
+@media screen and (max-width: 1024px) {
+    .boxCanales{
+        padding: 15px 20px;
+        margin: 15px;
+    }
 }
 
 /*BARRA DE NAVEGACION INFERIOR*/
@@ -400,5 +461,6 @@ footer{
 
 .mail{
     color: $colorFuentes;
+    text-decoration: underline;
     font-size: small;
 }
