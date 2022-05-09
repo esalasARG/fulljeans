@@ -50,23 +50,23 @@
             <h2>Contacto</h2>
         </div>
         <div>
-            <form class="formContacto">
-                <h3>Escribinos y nos pondremos en contacto con vos en breve:</h3>
+            <form class="formContacto" action="https://formspree.io/f/mqknwaqg" method="POST">
+                <h3>Dejanos tus datos, un detalle de lo que necesitas y nos pondremos en contacto con vos en breve:</h3>
                 <div>
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" required placeholder="tu nombre"> 
+                    <input type="text" id="nombre" name="name" required placeholder="tu nombre"> 
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" id="mail" required placeholder="tu email"> 
+                    <input type="email" id="mail" name="email" required placeholder="tu email"> 
                 </div>
                 <div>
                     <label for="tel">Teléfono</label>
-                    <input type="tel" id="telefono" required placeholder="tu teléfono"> 
+                    <input type="tel" id="telefono" name="telephone" required placeholder="tu teléfono"> 
                 </div>
                 <div>
                     <label for="comentarios">Tus comentarios</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="message" id="" cols="30" rows="10"></textarea>
                 </div>
                 <div>
                     <input type="submit" value="ENVIAR" class="botonContacto">
